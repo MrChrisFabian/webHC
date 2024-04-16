@@ -5,7 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 
-import '@fontsource-variable/bricolage-grotesque'
+import "@fontsource-variable/bricolage-grotesque";
+import NavBar from "../components/NavBar.astro";
 ---
 
 <!doctype html>
@@ -14,16 +15,17 @@ import '@fontsource-variable/bricolage-grotesque'
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/notHC.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
+		<NavBar/>
 		<slot />
 	</body>
 </html>
 <style is:global>
 	html {
-		font-family: 'Bricolage Grotesque Variable', 'sans-serif';
+		font-family: "Bricolage Grotesque Variable", "sans-serif";
 	}
 </style>
